@@ -1,0 +1,9 @@
+let
+    // 1) UPDATE this path to where you saved SampleData.csv (if needed)
+    Source = Csv.Document(File.Contents("/mnt/data/SampleData.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    PromoteHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    ChangedTypes = Table.TransformColumnTypes(PromoteHeaders,{{{"OrderID", Int64.Type}},{{"Date", type date}},{{"Region", type text}},{{"Salesperson", type text}},{{"Product", type text}},{{"Category", type text}},{{"Quantity", Int64.Type}},{{"UnitPrice", type number}},{{"TotalSales", type number}}}}),
+    Year = Table.AddColumn(ChangedTypes, "Year", each Date.Year([Date]), Int64.Type),
+    MonthName = Table.AddColumn(Year, "Month", each Date.ToText([Date], "MMM"), type text)
+in
+    MonthName
