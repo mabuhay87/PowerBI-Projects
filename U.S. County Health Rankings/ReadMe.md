@@ -1,4 +1,4 @@
-# 📊 Power BI Projects Portfolio — by Cristina Fontenot
+# 📊 Power BI Projects Portfolio — by Cristina F.
 
 Welcome to my **Power BI Portfolio** — a collection of interactive dashboards and analytics reports designed to demonstrate my expertise in **data visualization, DAX, Power Query, and business intelligence storytelling**.
 
@@ -44,3 +44,4 @@ When prompted for parameters, supply the full file path to the CSV you unzipped.
 ---
 
 ## 🗂️ **Repository Structure**
+
