@@ -1,0 +1,32 @@
+let
+    // Update the file path below if needed
+    Source = Csv.Document(File.Contents("/mnt/data/County_Health_Rankings.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    PromoteHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    // Type handling
+    ChangedTypes = Table.TransformColumnTypes(PromoteHeaders,{
+        { "State", type text },
+        { "County", type text },
+        { "State code", Int64.Type },
+        { "County code", Int64.Type },
+        { "Year span", type text },
+        { "Measure name", type text },
+        { "Measure id", Int64.Type },
+        { "Numerator", type number },
+        { "Denominator", type number },
+        { "Raw value", type number },
+        { "Confidence Interval Lower Bound", type number },
+        { "Confidence Interval Upper Bound", type number },
+        { "Data Release Year", Int64.Type },
+        { "fipscode", Int64.Type }
+    }),
+    // Derived columns
+    StateCodeText = Table.TransformColumns(ChangedTypes, {{"State code", each Text.PadStart(Text.From(_), 2, "0"), type text}}),
+    CountyCodeText = Table.TransformColumns(StateCodeText, {{"County code", each Text.PadStart(Text.From(_), 3, "0"), type text}}),
+    FIPS_Text = Table.TransformColumns(CountyCodeText, {{"fipscode", each Text.PadStart(Text.From(_), 5, "0"), type text}}),
+    // Convenience columns
+    StateCounty = Table.AddColumn(FIPS_Text, "State-County", each [State] & " - " & [County], type text),
+    Year = Table.AddColumn(StateCounty, "Year", each [Data Release Year], Int64.Type),
+    Reordered = Table.ReorderColumns(Year, {"State","County","State-County","State code","County code","fipscode","Year","Year span","Measure name","Measure id","Numerator","Denominator","Raw value","Confidence Interval Lower Bound","Confidence Interval Upper Bound","Data Release Year"}),
+    Renamed = Table.RenameColumns(Reordered, {{"Raw value","Raw Value"}})
+in
+    Renamed
