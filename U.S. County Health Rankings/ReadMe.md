@@ -1,4 +1,4 @@
-# 📊 Power BI Projects Portfolio — by Cristina F.
+# Power BI Projects Portfolio — by Cristina F.
 
 Welcome to my **Power BI Portfolio** — a collection of interactive dashboards and analytics reports designed to demonstrate my expertise in **data visualization, DAX, Power Query, and business intelligence storytelling**.
 
@@ -6,10 +6,10 @@ Each project showcases my ability to transform complex data into meaningful insi
 
 ---
 
-## 🌟 Featured Projects
+##  Featured Projects
 
 
-### 💊 **County_Health_Rankings Analytics Report**
+###  **County_Health_Rankings Analytics Report**
 Overview
 
 This report analyzes county-level health metrics across the United States to identify patterns, outliers, and drivers by State, County, Measure, and Year. It includes overview KPIs, choropleth maps, Top/Bottom rankings, decomposition analysis, and documentation pages.
@@ -33,7 +33,7 @@ When prompted for parameters, supply the full file path to the CSV you unzipped.
 
 ---
 
-## 🧠 **Skills Demonstrated**
+##  **Skills Demonstrated**
 - Data Modeling & Relationships  
 - Advanced DAX Formulas  
 - Power Query (ETL Data Cleaning)  
@@ -44,4 +44,5 @@ When prompted for parameters, supply the full file path to the CSV you unzipped.
 ---
 
 ## 🗂️ **Repository Structure**
+
 
