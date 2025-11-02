@@ -1,4 +1,4 @@
-# 📊 Power BI Projects Portfolio — by Cristina F
+# Power BI Projects Portfolio — by Cristina F
 
 Welcome to my **Power BI Portfolio** — a collection of interactive dashboards and analytics reports designed to demonstrate my expertise in **data visualization, DAX, Power Query, and business intelligence storytelling**.
 
@@ -6,9 +6,9 @@ Each project showcases my ability to transform complex data into meaningful insi
 
 ---
 
-## 🌟 Featured Projects
+## Featured Projects
 
-### 🏆 **Sales Dashboard**
+###  **Sales Dashboard**
 - Analyzes monthly sales across regions, products, and categories.  
 - Highlights revenue growth, profit margins, and top-performing items.  
 - Demonstrates use of advanced DAX measures, dynamic visuals, and drill-through features.
@@ -16,7 +16,7 @@ Each project showcases my ability to transform complex data into meaningful insi
 
 ---
 
-## 🧠 **Skills Demonstrated**
+##  **Skills Demonstrated**
 - Data Modeling & Relationships  
 - Advanced DAX Formulas  
 - Power Query (ETL Data Cleaning)  
@@ -26,5 +26,6 @@ Each project showcases my ability to transform complex data into meaningful insi
 
 ---
 
-## 🗂️ **Repository Structure**
+##  **Repository Structure**
+
 
