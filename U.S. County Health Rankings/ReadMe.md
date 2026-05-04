@@ -43,6 +43,9 @@ When prompted for parameters, supply the full file path to the CSV you unzipped.
 
 ---
 
+##  **Critical Note**
+- Remember to connect the CSV data after downloading the .pbit project to your machine in order for this project to work.
+
 
 
 
